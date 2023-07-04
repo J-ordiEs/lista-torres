@@ -1,0 +1,28 @@
+
+<div class="container">
+    <h2>Alumnos</h2>
+
+    <div class="p-5" *ngIf="selectedAlumno">
+        <h2>{{selectedAlumno.name | uppercase}} Details</h2>
+        <p class="fw-bold">ID: {{selectedAlumno.id}}</p>
+        <div>
+            <label class="p-2" for="alumno-name">Alumno name:</label>
+            <input class="p-2" id="alumno-name" [(ngModel)]="selectedAlumno.name" placeholder="name">
+        </div>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item"  *ngFor="let alumno of alumnos">
+            <p (click)="onSelect(alumno)">
+                <span>
+                    {{alumno.id}}
+                </span> 
+                - 
+                <span>
+                    {{alumno.name}}                    
+                </span>
+            </p>
+        </li>
+    </ul>  
+    
+</div>
