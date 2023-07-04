@@ -1,4 +1,3 @@
-
 <div class="container">
     <h2>Alumnos</h2>
 
@@ -7,22 +6,16 @@
         <p class="fw-bold">ID: {{selectedAlumno.id}}</p>
         <div>
             <label class="p-2" for="alumno-name">Alumno name:</label>
-            <input class="p-2" id="alumno-name" [(ngModel)]="selectedAlumno.name" placeholder="name">
+            <input id="name" class="p-2" id="alumno-name" [(ngModel)]="selectedAlumno.name" placeholder="name">
         </div>
     </div>
 
     <ul class="list-group">
-        <li class="list-group-item"  *ngFor="let alumno of alumnos">
+        <li class="list-group-item" *ngFor="let alumno of alumnos">
             <p (click)="onSelect(alumno)">
-                <span>
-                    {{alumno.id}}
-                </span> 
-                - 
-                <span>
-                    {{alumno.name}}                    
-                </span>
+                {{alumno.id}} - {{alumno.name}} <span class="bg-warning rounded p-2">click para cambiar el nombre</span>                
             </p>
         </li>
-    </ul>  
-    
+    </ul>
+
 </div>
