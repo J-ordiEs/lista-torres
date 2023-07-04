@@ -10,7 +10,7 @@ import { ALUMNOS } from 'src/app/mock-alumnos';
 export class ListaAlumnosComponent {
 
   alumnos = ALUMNOS;
-  selectedAlumno?: Alumno;
+  selectedAlumno?: Alumno;  
 
   onSelect(alumno:Alumno){
     this.selectedAlumno = alumno;
